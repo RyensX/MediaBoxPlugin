@@ -21,14 +21,6 @@ interface IPlayComponent : IBaseComponent {
     }
 
     /**
-     * 获取此部番剧封面
-     *
-     * @param detailPartUrl 页面相对url
-     * @return 番剧封面
-     */
-    suspend fun getAnimeCoverImageBean(detailPartUrl: String): String?
-
-    /**
      * 获取播放页面相关数据
      *
      * @param partUrl              页面相对url
