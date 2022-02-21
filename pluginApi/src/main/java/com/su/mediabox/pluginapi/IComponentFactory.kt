@@ -9,7 +9,7 @@ import java.lang.annotation.Inherited
  *
  * 每个插件都必须实现[Constant.PLUGIN_INIT_CLASS]且提供一个无参构造方法
  */
-@PluginSdkVersion(1)
+@PluginSdkVersion(2)
 abstract class IComponentFactory {
 
     /**

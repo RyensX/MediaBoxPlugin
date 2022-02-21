@@ -36,9 +36,6 @@ class AnimeCoverBean(
     var size: String? = null,
     //集数
     var episodeCount: String? = null,
-    // 0：/storage/emulated/0/Android/data/packname/files
-    // 1：/storage/emulated/0/
-    var path: Int = 0,
     override var rTitle: String = "",
     override var animeCoverList: List<AnimeCoverBean>? = null,
     override var episodeList: List<AnimeEpisodeDataBean>? = null,
