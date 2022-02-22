@@ -1,6 +1,5 @@
 package com.su.mediabox.pluginapi
 
-import com.su.mediabox.pluginapi.IComponentFactory.PluginSdkVersion
 import com.su.mediabox.pluginapi.components.IBaseComponent
 import java.lang.annotation.Inherited
 
@@ -9,23 +8,12 @@ import java.lang.annotation.Inherited
  *
  * 每个插件都必须实现[Constant.PLUGIN_INIT_CLASS]且提供一个无参构造方法
  */
-@PluginSdkVersion(2)
 abstract class IComponentFactory {
 
     /**
      * 根据类型创建组件
      */
     abstract fun <T : IBaseComponent> createComponent(clazz: Class<T>): T?
-
-    /**
-     * 插件SDK版本
-     *
-     * 在导入和载入时都会检查所在App支持的最低插件SDK版本，必须大于等于才能使用
-     */
-    @Target(AnnotationTarget.CLASS)
-    @Retention(AnnotationRetention.RUNTIME)
-    @Inherited
-    annotation class PluginSdkVersion(val version: Int)
 
     /**
      * 单例组件注解。
@@ -36,4 +24,11 @@ abstract class IComponentFactory {
     @Retention(AnnotationRetention.RUNTIME)
     @Inherited
     annotation class SingletonComponent
+
+    /**
+     * 插件API版本
+     *
+     * 在载入时会检查宿主支持的最低插件API版本，必须大于等于才能使用
+     */
+    val apiVersion = 1
 }
