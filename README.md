@@ -1,5 +1,5 @@
 # MediaBoxPlugin
- [**MediaBox**](https://github.com/Ryensu/MediaBox)插件API
+ [**MediaBox**](https://github.com/RyensX/MediaBox)插件API
 
 ## 编写指南
 1. 创建一个**Android App**项目
@@ -9,4 +9,4 @@
 
 ## 示例
 - [插件示例](app/src/main/java/com/su/)
-- [樱花动漫](https://github.com/Ryensu/SakuraAnimePlugin)
+- [樱花动漫](https://github.com/RyensX/SakuraAnimePlugin)
