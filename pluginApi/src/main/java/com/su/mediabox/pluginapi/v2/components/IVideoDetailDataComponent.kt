@@ -4,7 +4,7 @@ import com.su.mediabox.pluginapi.components.IBaseComponent
 import com.su.mediabox.pluginapi.v2.been.BaseData
 
 /**
- * 获取番剧详情数据组件
+ * 获取视频详情数据组件
  */
 interface IVideoDetailDataComponent : IBaseComponent {
     /**
