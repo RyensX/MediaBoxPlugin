@@ -30,5 +30,5 @@ abstract class IComponentFactory {
      *
      * 在载入时会检查宿主支持的最低插件API版本，必须大于等于才能使用
      */
-    val apiVersion = 3
+    val apiVersion = 4
 }
