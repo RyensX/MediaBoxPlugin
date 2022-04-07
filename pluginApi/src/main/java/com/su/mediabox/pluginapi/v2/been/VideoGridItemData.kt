@@ -9,4 +9,4 @@ class VideoGridItemData(
     val coverUrl: String,
     val url: String,
     val other: String = ""
-) : GridItemData()
+) : BaseData()

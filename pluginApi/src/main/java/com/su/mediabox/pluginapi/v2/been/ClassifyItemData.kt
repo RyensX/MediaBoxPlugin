@@ -9,4 +9,4 @@ import com.su.mediabox.pluginapi.v2.action.ClassifyAction
  *
  * 宿主在获取所有分类项数据后会根据[ClassifyAction.classifyCategory]自动进行分类
  */
-class ClassifyItemData : GridItemData()
+class ClassifyItemData : BaseData()
