@@ -9,6 +9,11 @@ import java.io.Serializable
  */
 abstract class Action : Serializable {
 
+    /**
+     * 额外数据，用于扩展Action
+     */
+    var extraData: Any? = null
+
     companion object {
         //动作池，每种动作对应一个List
         val actionPool by lazy(LazyThreadSafetyMode.NONE) { mutableMapOf<Class<out Action>, MutableSet<Action>>() }
