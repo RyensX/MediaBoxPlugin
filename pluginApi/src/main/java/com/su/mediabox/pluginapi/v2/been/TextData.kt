@@ -2,7 +2,6 @@ package com.su.mediabox.pluginapi.v2.been
 
 import android.graphics.Typeface
 import android.view.Gravity
-import com.su.mediabox.pluginapi.Constant.TEXT_DATA_DEFAULT_COLOR
 import com.su.mediabox.pluginapi.UI.dp
 
 /**
@@ -15,9 +14,9 @@ data class TextData(
      */
     val fontSize: Float = 15F,
     /**
-     * 0xAARRGGBB 形式的颜色值，默认[TEXT_DATA_DEFAULT_COLOR]，即使用主题色
+     * 0xAARRGGBB 形式的颜色值，默认null，即使用主题色
      */
-    val fontColor: Int = TEXT_DATA_DEFAULT_COLOR,
+    val fontColor: Int? = null,
     /**
      * 取Typeface内 Style的值，如[Typeface.BOLD]
      */

@@ -12,8 +12,6 @@ object Constant {
 
     const val DEFAULT_SPAN_SIZE = 1
 
-    const val TEXT_DATA_DEFAULT_COLOR = -1
-
     /**
      * 此动作为App自身路由使用，与服务器无关
      *
