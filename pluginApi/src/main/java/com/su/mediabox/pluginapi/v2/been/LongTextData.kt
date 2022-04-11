@@ -21,7 +21,5 @@ data class LongTextData(
      * 取[android.view.Gravity]内的值
      */
     val fontStyle: Int = 0,
-    val gravity: Int = Gravity.LEFT,
-    val paddingTop: Int = 12.dp,
-    val paddingBottom: Int = 8.dp
+    val gravity: Int = Gravity.LEFT
 ) : BaseData()

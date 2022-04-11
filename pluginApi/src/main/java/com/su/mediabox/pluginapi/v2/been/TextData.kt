@@ -24,9 +24,5 @@ data class TextData(
     /**
      * 取[android.view.Gravity]内的值
      */
-    val gravity: Int = Gravity.LEFT,
-    val paddingTop: Int = 12.dp,
-    val paddingBottom: Int = 8.dp,
-    val paddingLeft: Int = 9.dp,
-    val paddingRight: Int = 8.dp
+    val gravity: Int = Gravity.LEFT
 ) : BaseData()

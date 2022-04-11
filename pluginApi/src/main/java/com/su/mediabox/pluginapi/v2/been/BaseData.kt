@@ -1,6 +1,7 @@
 package com.su.mediabox.pluginapi.v2.been
 
 import com.su.mediabox.pluginapi.Constant
+import com.su.mediabox.pluginapi.UI.dp
 import com.su.mediabox.pluginapi.v2.action.Action
 
 /**
@@ -14,4 +15,9 @@ abstract class BaseData {
      * 参考[GridLayoutManager]使用，在被包含在[GridData]时有效
      */
     open var spanSize: Int = Constant.DEFAULT_SPAN_SIZE
+
+    open var paddingTop: Int = 8.dp
+    open var paddingBottom: Int = 8.dp
+    open var paddingLeft: Int = 12.dp
+    open var paddingRight: Int = 12.dp
 }
