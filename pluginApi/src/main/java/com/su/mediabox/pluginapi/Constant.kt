@@ -10,7 +10,10 @@ object Constant {
     const val PLUGIN_ACTION = "media_box_plugin_action"
     const val PLUGIN_INIT_CLASS = "com.su.mediabox.plugin.ComponentFactory"
 
-    const val DEFAULT_SPAN_SIZE = 1
+    const val DEFAULT_SPAN_COUNT = 8
+
+    //默认占满一行
+    const val DEFAULT_SPAN_SIZE = DEFAULT_SPAN_COUNT
 
     /**
      * 此动作为App自身路由使用，与服务器无关

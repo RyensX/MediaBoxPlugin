@@ -12,6 +12,9 @@ class VideoGridItemData(
     val url: String,
     val other: String = ""
 ) : BaseData() {
+
+    override var spanSize: Int = 2
+
     override var paddingLeft: Int = 0.dp
     override var paddingTop: Int = 0.dp
     override var paddingRight: Int = 0.dp
