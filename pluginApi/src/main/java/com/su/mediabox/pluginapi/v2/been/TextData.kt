@@ -1,28 +1,31 @@
 package com.su.mediabox.pluginapi.v2.been
 
+import android.graphics.Color
 import android.graphics.Typeface
 import android.view.Gravity
 import com.su.mediabox.pluginapi.UI.dp
 
 /**
- * 文本视图组件数据
+ * 文本视图组件数据基类
  */
-data class TextData(
-    val text: String,
+abstract class TextData : BaseData() {
     /**
      * 单位SP
      */
-    val fontSize: Float = 15F,
+    open var fontSize: Float = 15F
+
     /**
-     * 0xAARRGGBB 形式的颜色值，默认null，即使用主题色
+     * 颜色值,建议用[Color.parseColor]解析，默认null，即使用主题色
      */
-    val fontColor: Int? = null,
+    open var fontColor: Int? = null
+
     /**
      * 取Typeface内 Style的值，如[Typeface.BOLD]
      */
-    val fontStyle: Int = 0,
+    open var fontStyle: Int = 0
+
     /**
      * 取[android.view.Gravity]内的值
      */
-    val gravity: Int = Gravity.LEFT
-) : BaseData()
+    open var gravity: Int = Gravity.LEFT
+}
