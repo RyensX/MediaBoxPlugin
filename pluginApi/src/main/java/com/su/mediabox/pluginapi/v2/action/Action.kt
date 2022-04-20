@@ -1,5 +1,7 @@
 package com.su.mediabox.pluginapi.v2.action
 
+import android.content.Context
+import com.su.mediabox.pluginapi.AppUtil
 import java.io.Serializable
 
 /**
@@ -32,6 +34,8 @@ abstract class Action : Serializable {
 
     /**
      * 动作执行
+     *
+     * @param context 不要持有，有需要全局可使用[AppUtil.appContext]
      */
-    abstract fun go()
+    abstract fun go(context: Context)
 }

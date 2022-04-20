@@ -1,15 +1,17 @@
 package com.su.mediabox.pluginapi.v2.action
 
+import android.content.Context
+
 class SearchAction private constructor(val keyWork: String) : Action() {
     companion object {
         //由宿主初始化
-        lateinit var GO: SearchAction.() -> Unit
+        lateinit var GO: SearchAction.(Context) -> Unit
 
         fun obtain(keyWork: String = "") =
             getAction { this.keyWork == keyWork } ?: SearchAction(keyWork)
     }
 
-    override fun go() {
-        GO()
+    override fun go(context: Context) {
+        GO(context)
     }
 }

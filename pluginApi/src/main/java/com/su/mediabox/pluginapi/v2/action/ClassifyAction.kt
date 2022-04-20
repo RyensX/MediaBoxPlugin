@@ -1,5 +1,7 @@
 package com.su.mediabox.pluginapi.v2.action
 
+import android.content.Context
+
 class ClassifyAction private constructor(
     val url: String?,
     val classifyCategory: String?,
@@ -7,7 +9,7 @@ class ClassifyAction private constructor(
 ) : Action() {
     companion object {
         //由宿主初始化
-        lateinit var GO: ClassifyAction.() -> Unit
+        lateinit var GO: ClassifyAction.(Context) -> Unit
 
         /**
          * @param url 分类链接，不为空时默认加载
@@ -23,7 +25,7 @@ class ClassifyAction private constructor(
                 ?: ClassifyAction(url, classifyCategory, classify)
     }
 
-    override fun go() {
-        GO()
+    override fun go(context: Context) {
+        GO(context)
     }
 }

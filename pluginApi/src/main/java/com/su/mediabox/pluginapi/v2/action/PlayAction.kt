@@ -1,5 +1,7 @@
 package com.su.mediabox.pluginapi.v2.action
 
+import android.content.Context
+
 class PlayAction private constructor(
     val episodeUrl: String,
     var coverUrl: String,
@@ -8,7 +10,7 @@ class PlayAction private constructor(
 ) : Action() {
     companion object {
         //由宿主初始化
-        lateinit var GO: PlayAction.() -> Unit
+        lateinit var GO: PlayAction.(Context) -> Unit
 
         /**
          * @param episodeUrl 剧集链接，插件只需要提供此参数，其余数据由宿主自动填入
@@ -24,7 +26,7 @@ class PlayAction private constructor(
             ?: PlayAction(episodeUrl, coverUrl, detailPartUrl, videoName)
     }
 
-    override fun go() {
-        GO()
+    override fun go(context: Context) {
+        GO(context)
     }
 }

@@ -1,5 +1,6 @@
 package com.su.mediabox.pluginapi.v2.action
 
+import android.content.Context
 import com.su.mediabox.pluginapi.v2.been.BaseData
 import java.io.Serializable
 
@@ -11,15 +12,15 @@ class CustomDataAction private constructor(
     Action() {
     companion object {
         //由宿主初始化
-        lateinit var GO: CustomDataAction.() -> Unit
+        lateinit var GO: CustomDataAction.(Context) -> Unit
 
         fun obtain(title: String, loader: Loader, actions: List<Action>? = null) =
             getAction { this.title == title && this.loader == loader }
                 ?: CustomDataAction(title, loader, actions)
     }
 
-    override fun go() {
-        GO()
+    override fun go(context: Context) {
+        GO(context)
     }
 
     interface Loader : Serializable {
