@@ -2,4 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.su.mediabox.pluginapi">
 
+    <application>
+        <!--插件API版本-->
+        <!--在载入时会检查宿主支持的最低插件API版本，必须大于等于才能使用-->
+        <meta-data
+            android:name="api_version"
+            android:value="1" />
+    </application>
+
 </manifest>
