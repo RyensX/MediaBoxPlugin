@@ -5,10 +5,9 @@ import kotlin.random.Random
 object Constant {
 
     /**
-     * 每个插件都必须给任意一个Activity（一般是LAUNCHER）添加一个<action android:name="media_box_plugin_action" />标识为MediaBox插件
+     * 调试标记，在插件任意一个Activity（一般是LAUNCHER）添加一个<action android:name="media_plugin_debug" />即可让媒体盒子识别为外部插件以方便调试
      */
-    const val PLUGIN_ACTION = "media_box_plugin_action"
-    const val PLUGIN_INIT_CLASS = "com.su.mediabox.plugin.ComponentFactory"
+    const val PLUGIN_DEBUG_ACTION = "media_plugin_debug"
 
     const val DEFAULT_SPAN_COUNT = 8
 
