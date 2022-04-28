@@ -6,7 +6,7 @@ import com.su.mediabox.pluginapi.UI.dp
  * 视频网格子项视图组件数据
  * @param other 剧集信息等
  */
-class VideoGridItemData(
+data class VideoGridItemData(
     val name: String,
     val coverUrl: String,
     val url: String,

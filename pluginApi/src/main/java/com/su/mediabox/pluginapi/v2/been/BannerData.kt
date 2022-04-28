@@ -7,7 +7,7 @@ import com.su.mediabox.pluginapi.UI.dp
  * @param autoPlayInterval 自动轮播时间间隔，如果为0则不会自动轮播
  * @param round 圆角
  */
-class BannerData(
+data class BannerData(
     val bannerItems: List<BannerItemData>,
     val round: Int = 4.dp,
     val autoPlayInterval: Long = 5000

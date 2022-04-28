@@ -6,7 +6,7 @@ package com.su.mediabox.pluginapi.v2.been
  * @param defaultPage 默认打开的页，默认0
  */
 //TODO 更多自定义属性
-class ViewPagerData(
+data class ViewPagerData(
     val pageLoaders: List<PageLoader>,
     val defaultPage: Int = 0
 ) : BaseData() {

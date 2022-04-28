@@ -5,7 +5,7 @@ import com.su.mediabox.pluginapi.UI.dp
 /**
  * 视频信息子项视图组件数据
  */
-class VideoInfoItemData(
+data class VideoInfoItemData(
     val name: String,
     val coverUrl: String,
     val url: String,
