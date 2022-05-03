@@ -1,6 +1,7 @@
 package com.su.mediabox.pluginapi
 
 import com.su.mediabox.pluginapi.components.IBaseComponent
+import com.su.mediabox.pluginapi.v2.action.HomeAction
 import java.lang.annotation.Inherited
 
 /**
@@ -24,5 +25,12 @@ abstract class IComponentFactory {
     @Retention(AnnotationRetention.RUNTIME)
     @Inherited
     annotation class SingletonComponent
+
+    /**
+     * 入口动作，在插件列表启动插件后执行的动作，一般用于启动初始界面
+     *
+     * 默认[HomeAction]，即直接启动家页面
+     */
+    open val initAction = HomeAction
 
 }
