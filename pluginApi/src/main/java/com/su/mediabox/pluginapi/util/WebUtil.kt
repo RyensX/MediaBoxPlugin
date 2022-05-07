@@ -1,5 +1,8 @@
 package com.su.mediabox.pluginapi.util
 
+/**
+ * Web工具，由宿主初始化
+ */
 lateinit var WebUtiIns: WebUtil
 
 interface WebUtil {
