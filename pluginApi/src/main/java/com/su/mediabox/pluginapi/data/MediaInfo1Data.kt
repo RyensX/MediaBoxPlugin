@@ -1,19 +1,25 @@
 package com.su.mediabox.pluginapi.data
 
+import android.view.Gravity
+import android.widget.ImageView.ScaleType
 import com.su.mediabox.pluginapi.util.UIUtil.dp
 
 /**
  * 媒体信息样式1视图组件数据
  * @param other 剧集信息等
- * @param otherColor 默认-1使用主题色
+ * @param nameColor/otherColor 默认null使用主题色
+ * @param gravity name和other等可显示文本的gravity
  */
 data class MediaInfo1Data(
     val name: String,
     val coverUrl: String,
     val url: String,
     val other: String = "",
-    val otherColor: Int = -1,
-    val coverHeight: Int = 150.dp
+    val nameColor: Int? = null,
+    val otherColor: Int? = null,
+    val coverScaleType: ScaleType = ScaleType.FIT_CENTER,
+    val coverHeight: Int = 150.dp,
+    val gravity: Int = Gravity.START
 ) : BaseData() {
 
     override var spanSize: Int = 2

@@ -26,5 +26,5 @@ abstract class TextData : BaseData() {
     /**
      * 取[android.view.Gravity]内的值
      */
-    open var gravity: Int = Gravity.LEFT
+    open var gravity: Int = Gravity.START
 }
