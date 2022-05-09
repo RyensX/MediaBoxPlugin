@@ -1,5 +1,6 @@
 package com.su.mediabox.pluginapi.data
 
+import android.graphics.Color
 import android.view.Gravity
 import android.widget.ImageView.ScaleType
 import com.su.mediabox.pluginapi.util.UIUtil.dp
@@ -15,9 +16,10 @@ data class MediaInfo1Data(
     val coverUrl: String,
     val url: String,
     val other: String = "",
-    val nameColor: Int? = null,
+    val other2: String = "",
+    val nameColor: Int? = Color.BLACK,
     val otherColor: Int? = null,
-    val coverScaleType: ScaleType = ScaleType.FIT_CENTER,
+    val coverScaleType: ScaleType = ScaleType.CENTER_CROP,
     val coverHeight: Int = 150.dp,
     val gravity: Int = Gravity.START
 ) : BaseData() {
