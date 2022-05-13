@@ -25,15 +25,30 @@ interface WebUtil {
     /**
      * 拦截资源
      *
-     * 由于无法确定最后加载，所以最好加一个超时（需要自己加，如使用协程的withTimeout），否则拦截不到会一直暂停
-     *
      * @param regex 回调正则，在检测到特定请求时返回结果
      * @param actionJs 在页面加载完成后执行的js代码，可用于主动加载资源，如让视频加载出来以拦截
+     * @param timeOut 加载超时。当超过超时时间后还没返回数据则会直接返回当前源码
      */
     suspend fun interceptResource(
         url: String,
         regex: String,
         userAgentString: String? = null,
-        actionJs: String? = null
+        actionJs: String? = null,
+        timeOut: Long = 8000L
+    ): String
+
+    /**
+     * 拦截Blob数据
+     *
+     * @param regex 回调正则，在检测到特定Blob数据符合时返回结果
+     * @param actionJs 在页面加载完成后执行的js代码，可用于主动加载资源，如让视频加载出来以拦截
+     * @param timeOut 加载超时。当超过超时时间后还没返回数据则会直接返回当前源码
+     */
+    suspend fun interceptBlob(
+        url: String,
+        regex: String,
+        userAgentString: String? = null,
+        actionJs: String? = null,
+        timeOut: Long = 8000L
     ): String
 }
