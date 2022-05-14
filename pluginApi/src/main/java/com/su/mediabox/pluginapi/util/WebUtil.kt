@@ -1,9 +1,11 @@
 package com.su.mediabox.pluginapi.util
 
 /**
- * Web工具，由宿主初始化
+ * Web工具，由宿主初始化，插件直接调用即可，不需要自己实现
+ *
+ * 注意：该工具不能在单元测试中使用
  */
-lateinit var WebUtiIns: WebUtil
+lateinit var WebUtilIns: WebUtil
 
 interface WebUtil {
     /**

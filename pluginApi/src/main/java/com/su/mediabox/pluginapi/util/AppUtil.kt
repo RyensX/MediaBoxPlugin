@@ -4,7 +4,7 @@ import android.content.Context
 
 object AppUtil {
 
-    var appContext: Context? = null
+    lateinit var appContext: Context
         private set
 
     /**
