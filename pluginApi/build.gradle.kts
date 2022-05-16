@@ -33,5 +33,5 @@ android {
 }
 
 dependencies {
-
+    compileOnly("com.kuaishou:akdanmaku:1.0.3")
 }
