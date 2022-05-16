@@ -15,6 +15,13 @@ interface IVideoPlayPageDataComponent : IBasePageDataComponent {
     suspend fun getDanmakuData(episodeUrl: String): Pair<String, Map<String, String>?>? = null
 
     /**
+     * 发送一条弹幕，如果需要登陆等验证需要自行实现逻辑
+     *
+     * @return 发送结果
+     */
+    suspend fun putDanmaku(danmaku: String): Boolean
+
+    /**
      * 获取播放页面相关数据
      */
     suspend fun getVideoPlayMedia(episodeUrl: String): VideoPlayMedia

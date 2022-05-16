@@ -5,7 +5,7 @@ import com.su.mediabox.pluginapi.action.HomeAction
 import java.lang.annotation.Inherited
 
 /**
- * 组件工厂
+ * 插件工厂
  *
  * 每个插件都必须实现且提供一个无参构造方法
  */
