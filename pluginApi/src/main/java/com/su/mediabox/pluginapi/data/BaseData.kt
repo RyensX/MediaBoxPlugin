@@ -34,13 +34,17 @@ abstract class BaseData {
     /**
      * @param spanCount 与[GridLayoutManager]中的spanCount用法一致
      * @param itemSpacing 项分隔空间
-     * @param listLeftEdge 所在列表左边距
-     * @param listRightEdge 所在列表由边距
      */
     data class LayoutConfig(
         val spanCount: Int = Constant.DEFAULT_SPAN_COUNT,
-        val itemSpacing: Int = 8.dp,
-        val listLeftEdge: Int = itemSpacing,
-        val listRightEdge: Int = itemSpacing,
-    )
+        val itemSpacing: Int = 8.dp
+    ) {
+        @Deprecated("兼容处理，会逐步删除，请尽快更新API")
+        constructor(
+            spanCount: Int = Constant.DEFAULT_SPAN_COUNT,
+            itemSpacing: Int = 8.dp,
+            listLeftEdge: Int = itemSpacing,
+            listRightEdge: Int = itemSpacing,
+        ) : this(spanCount, itemSpacing)
+    }
 }
