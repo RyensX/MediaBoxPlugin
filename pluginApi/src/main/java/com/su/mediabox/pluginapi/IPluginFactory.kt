@@ -1,5 +1,6 @@
 package com.su.mediabox.pluginapi
 
+import com.su.mediabox.pluginapi.action.Action
 import com.su.mediabox.pluginapi.components.IBasePageDataComponent
 import com.su.mediabox.pluginapi.action.HomeAction
 import java.lang.annotation.Inherited
@@ -16,7 +17,7 @@ abstract class IPluginFactory {
      *
      * 默认[HomeAction]，即直接启动家页面
      */
-    open val initAction = HomeAction
+    open val initAction: Action = HomeAction
 
     /**
      * 根据类型创建组件
