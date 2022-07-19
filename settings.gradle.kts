@@ -13,5 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MediaBoxPlugin"
-include( ":app")
 include(":pluginApi")
