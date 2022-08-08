@@ -1,5 +1,6 @@
 package com.su.mediabox.pluginapi.components
 
+import android.graphics.Color
 import com.kuaishou.akdanmaku.data.DanmakuItemData
 import com.su.mediabox.pluginapi.data.VideoPlayMedia
 import com.su.mediabox.pluginapi.util.danmaku.AnimeDanmakuParser
@@ -23,9 +24,22 @@ interface IVideoPlayPageDataComponent : IBasePageDataComponent {
     /**
      * 发送一条弹幕，如果需要登陆等验证需要自行实现逻辑
      *
+     * @param danmaku 弹幕内容
+     * @param time 弹幕显示时间(播放视频当前进度)
+     * @param color 弹幕颜色，参考[Color]
+     * @param type 弹幕类型，取值[DanmakuItemData]的DANMAKU_MODE，如[DanmakuItemData.DANMAKU_MODE_ROLLING]
+     *
      * @return 发送结果
      */
-    suspend fun putDanmaku(danmaku: String): Boolean = false
+    suspend fun putDanmaku(
+        videoName: String,
+        episodeName: String,
+        episodeUrl: String,
+        danmaku: String,
+        time: Long,
+        color: Int,
+        type: Int
+    ): Boolean = false
 
     /**
      * 获取播放页面相关数据
