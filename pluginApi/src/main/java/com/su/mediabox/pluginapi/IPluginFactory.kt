@@ -25,6 +25,11 @@ abstract class IPluginFactory {
     abstract fun <T : IBasePageDataComponent> createComponent(clazz: Class<T>): T?
 
     /**
+     * 插件启动时被调用
+     */
+    open fun pluginLaunch() {}
+
+    /**
      * 插件对应数据源域名
      */
     abstract val host: String
