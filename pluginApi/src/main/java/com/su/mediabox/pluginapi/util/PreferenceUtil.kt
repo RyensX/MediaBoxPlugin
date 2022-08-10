@@ -25,4 +25,11 @@ interface PluginPreference {
      * @return 是否成功持久化
      */
     suspend fun <T> set(key: String, value: T, isVisual: Boolean = true): Boolean
+
+    /**
+     * 初始化键对，如果键对已存在则无效
+     *
+     * @param defaultValue 默认值
+     */
+    fun <T> initKey(key: String, defaultValue: T, isVisual: Boolean = true)
 }
