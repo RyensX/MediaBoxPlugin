@@ -13,6 +13,13 @@ import com.su.mediabox.pluginapi.data.BaseData
 interface ICustomPageDataComponent : IBasePageDataComponent {
 
     /**
+     * 在page启动时会调用，如需要获取启动本页的action的子类可重写
+     *
+     * 在通过它传递自定义参数时可使用[Action.extraData]
+     */
+    fun initPage(action: CustomPageAction) {}
+
+    /**
      * 页面名称
      */
     val pageName: String
